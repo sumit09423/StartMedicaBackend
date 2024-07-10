@@ -49,9 +49,9 @@ const registerController=()=>{
                 await mailServices.sendEmail(req.body.email,'Thank for registration','Health and Wellness',html,null)
 
               
-                const url=`/verifyuser?email=${req.body.email}`;
+                const email = req.body.email;
                 res.status(200).send({
-                    url
+                    email
                 });
                 // res.redirect(`/verifyuser?email=${req.body.email}`);
                     
